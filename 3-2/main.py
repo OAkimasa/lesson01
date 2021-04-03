@@ -8,7 +8,7 @@ def main():
     result = []
     line1 = []
     line2 = []
-    for i in range(1, b+1):
+    for i in range(b):
         checki = i%2
         if b>0 and checki!=0:
             line1.append('*')
@@ -16,15 +16,13 @@ def main():
         elif b>0 and checki==0:
             line1.append('_')
             line2.append('*')
-        b = b-1
 
-    for j in range(1, a+1):
+    for j in range(a):
         checkj = j%2
         if a>0 and checkj!=0:
             result.append(line1)
         elif a>0 and checkj==0:
             result.append(line2)
-        a = a-1
 
     for results in result:
         print(*results)
