@@ -1,10 +1,14 @@
 let args = process.argv;
 //コマンドライン引数の先頭から要素を２つ削除したい
-args.shift()
-args.shift()
+var slargs = args.slice(2);
+
+//比較関数
+var comparefunc = function (a, b) {
+    return a - b  //b - aとすれば降順になる
+}
 
 //数値化して並び替え
-const nums = args.map(Number).sort(),
+const nums = slargs.map(Number).sort(comparefunc),
     target = Math.floor(nums.length / 2);
 
 if (nums.length % 2 === 1) {
