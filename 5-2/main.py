@@ -29,7 +29,7 @@ for i in users_dict:
         i.update(salary = xYears_C*i['years']+money_C)
 
 # keyを指定して並び替え
-sorted_users_dict = sorted(users_dict, key=lambda x:x['salary'],reverse=True)
+sorted_users_dict = sorted(users_dict, key=lambda x:int(x['salary']),reverse=True)
 
 # nameとsalaryを表示
 for i in sorted_users_dict:
