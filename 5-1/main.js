@@ -18,3 +18,9 @@ const profiles = {
     }
   ]
 }
+
+const profile = profiles.profiles;
+
+for (let i = 0; i < profile.length; i++){
+  console.log('%s' + ':' + '%d', profile[i].name, profile[i].age)
+}
